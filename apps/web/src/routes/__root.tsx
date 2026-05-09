@@ -40,7 +40,7 @@ function RootComponent() {
 			<HeadContent />
 			<div className="grid min-h-svh grid-rows-[auto_1fr_auto]">
 				<Header />
-				<div>
+				<div className="min-w-0">
 					<Outlet />
 				</div>
 				<Footer />

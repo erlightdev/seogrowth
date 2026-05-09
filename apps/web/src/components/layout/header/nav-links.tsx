@@ -33,11 +33,11 @@ const rankBars = [32, 44, 38, 58, 66, 74, 86].map((height, position) => ({
 
 export function NavLinks() {
 	return (
-		<nav className="hidden items-center gap-10 lg:flex">
-			<div className="group">
+		<nav className="hidden h-[60px] items-center gap-10 lg:flex">
+			<div className="group flex h-full items-center">
 				<a
 					href="/services"
-					className="font-normal text-[13px] text-muted-text uppercase tracking-[0.04em] no-underline transition-colors hover:text-ink"
+					className="flex h-full items-center font-normal text-[13px] text-muted-text uppercase tracking-[0.04em] no-underline transition-colors hover:text-ink"
 				>
 					Services
 				</a>

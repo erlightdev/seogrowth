@@ -53,7 +53,7 @@ function CaseStudiesPage() {
 					{ name: "Case Studies", path: "/case-studies" },
 				])}
 			/>
-			<main className="bg-paper pt-[60px] text-ink">
+			<main className="min-w-0 overflow-x-hidden bg-paper pt-[60px] text-ink">
 				<Hero />
 				<CaseSwiper />
 				<TrustSection />
@@ -71,7 +71,7 @@ function Hero() {
 	return (
 		<section className="border-rule border-b">
 			<div className="site-container grid min-h-[62dvh] gap-px bg-rule lg:grid-cols-[1.08fr_0.92fr] lg:border-rule lg:border-x">
-				<div className="seo-reveal bg-paper p-6 md:p-10 lg:p-12">
+				<div className="bg-paper p-6 md:p-10 lg:p-12">
 					<div className="mb-8 flex items-center gap-2 font-mono text-[10px] text-muted-text uppercase tracking-[0.12em]">
 						<span className="h-px w-6 bg-muted-text" />
 						SEO case studies
@@ -99,7 +99,7 @@ function Hero() {
 						</a>
 					</div>
 				</div>
-				<div className="seo-reveal relative overflow-hidden bg-ink p-6 text-paper md:p-10 lg:p-12">
+				<div className="relative overflow-hidden bg-ink p-6 text-paper md:p-10 lg:p-12">
 					<div className="absolute inset-0 opacity-[0.08] [background-image:linear-gradient(rgba(245,243,238,.4)_1px,transparent_1px),linear-gradient(90deg,rgba(245,243,238,.4)_1px,transparent_1px)] [background-size:34px_34px]" />
 					<div className="relative flex h-full min-h-[420px] flex-col justify-end">
 						<div className="grid h-[250px] grid-cols-9 items-end gap-2">
@@ -138,8 +138,8 @@ function Hero() {
 function CaseSwiper() {
 	return (
 		<section id="case-study-details" className="border-rule border-b">
-			<div className="site-container border-rule lg:border-x">
-				<div className="seo-reveal grid grid-cols-1 items-end gap-8 border-rule border-b px-6 py-14 md:px-10 lg:grid-cols-[0.9fr_1.1fr] lg:px-12">
+			<div className="site-container min-w-0 border-rule lg:border-x">
+				<div className="grid grid-cols-1 items-end gap-8 border-rule border-b px-6 py-14 md:px-10 lg:grid-cols-[0.9fr_1.1fr] lg:px-12">
 					<div>
 						<div className="mb-5 font-mono text-[10px] text-muted-text uppercase tracking-[0.12em]">
 							Compact proof system
@@ -164,11 +164,11 @@ function CaseSwiper() {
 						900: { slidesPerView: 1.12 },
 						1180: { slidesPerView: 1.22 },
 					}}
-					className="case-study-swiper bg-rule"
+					className="case-study-swiper min-w-0 bg-rule"
 				>
 					{caseStudies.map((study) => (
 						<SwiperSlide key={study.name} className="h-auto">
-							<article className="seo-reveal grid h-full min-h-[620px] gap-px bg-rule pb-10 lg:grid-cols-[0.82fr_1.18fr]">
+							<article className="grid h-full min-h-[620px] gap-px bg-rule pb-10 lg:grid-cols-[0.82fr_1.18fr]">
 								<div className="flex flex-col justify-between bg-ink p-7 text-paper md:p-10">
 									<div>
 										<div className="flex items-center justify-between">
@@ -266,7 +266,7 @@ function TrustSection() {
 	return (
 		<section className="border-rule border-b bg-[#eceae1]">
 			<div className="site-container grid gap-px bg-rule lg:grid-cols-[0.8fr_1.2fr] lg:border-rule lg:border-x">
-				<div className="seo-reveal bg-[#eceae1] p-7 md:p-10 lg:p-12">
+				<div className="bg-[#eceae1] p-7 md:p-10 lg:p-12">
 					<div className="font-mono text-[10px] text-muted-text uppercase tracking-[0.12em]">
 						Trust layer
 					</div>
@@ -280,7 +280,7 @@ function TrustSection() {
 				</div>
 				<div className="grid gap-px bg-rule md:grid-cols-3">
 					{trustSignals.map(([title, body]) => (
-						<div key={title} className="seo-reveal bg-paper p-7 md:p-9">
+						<div key={title} className="bg-paper p-7 md:p-9">
 							<div className="mb-12 h-2 w-2 bg-acid" />
 							<h3 className="font-bold text-[18px] tracking-[-0.01em]">
 								{title}
@@ -315,7 +315,7 @@ function CompactComparison() {
 							"Cleaner crawling, stronger commercial pages, safer authority signals and reporting that connected SEO to pipeline.",
 						],
 					].map(([title, body]) => (
-						<div key={title} className="seo-reveal bg-paper p-7 md:p-10">
+						<div key={title} className="bg-paper p-7 md:p-10">
 							<div className="font-serif text-[52px] leading-none tracking-[-0.04em]">
 								{title}
 							</div>

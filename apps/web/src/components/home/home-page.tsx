@@ -69,7 +69,7 @@ const process = [
 
 export function HomePage() {
 	return (
-		<main className="bg-paper text-ink">
+		<main className="min-w-0 overflow-x-hidden bg-paper text-ink">
 			<Hero />
 			<SignalBar />
 			<ServiceMatrix />
@@ -86,10 +86,10 @@ export function HomePage() {
 
 function Hero() {
 	return (
-		<section className="relative overflow-hidden border-rule border-b pt-[60px]">
-			<div className="pointer-events-none absolute inset-0 opacity-[0.06] [background-image:linear-gradient(rgba(10,10,8,.35)_1px,transparent_1px),linear-gradient(90deg,rgba(10,10,8,.35)_1px,transparent_1px)] [background-size:48px_48px]" />
-			<div className="site-container relative grid min-h-[calc(100dvh-60px)] grid-cols-1 border-rule lg:grid-cols-[1.08fr_0.92fr] lg:border-x">
-				<div className="flex flex-col justify-between px-5 pt-14 pb-10 md:px-8 lg:px-12 lg:pt-20 lg:pb-12">
+		<section className="relative isolate overflow-hidden border-rule border-b pt-[60px]">
+			<div className="pointer-events-none absolute inset-0 z-0 opacity-[0.06] [background-image:linear-gradient(rgba(10,10,8,.35)_1px,transparent_1px),linear-gradient(90deg,rgba(10,10,8,.35)_1px,transparent_1px)] [background-size:48px_48px]" />
+			<div className="site-container relative z-[1] grid min-h-[calc(100dvh-60px)] grid-cols-1 border-rule lg:grid-cols-[1.08fr_0.92fr] lg:border-x">
+				<div className="relative z-[2] flex flex-col justify-between px-5 pt-14 pb-10 md:px-8 lg:px-12 lg:pt-20 lg:pb-12">
 					<div className="max-w-[760px]">
 						<div className="mb-8 flex flex-wrap items-center gap-3">
 							<span className="inline-flex items-center gap-2 border border-rule bg-paper/80 px-3 py-1.5 font-mono text-[10px] text-muted-text uppercase tracking-[0.12em]">
@@ -140,7 +140,7 @@ function Hero() {
 					</div>
 				</div>
 
-				<aside className="relative min-h-[560px] overflow-hidden border-rule border-t bg-ink text-paper lg:border-t-0 lg:border-l">
+				<aside className="relative z-[2] min-h-[560px] overflow-hidden border-rule border-t bg-ink text-paper lg:border-t-0 lg:border-l">
 					<div className="absolute inset-x-6 top-8 flex items-center justify-between border-paper/10 border-b pb-4 lg:inset-x-10">
 						<span className="font-mono text-[10px] text-paper/40 uppercase tracking-[0.12em]">
 							live audit model
@@ -197,8 +197,8 @@ function Hero() {
 function SignalBar() {
 	return (
 		<div className="overflow-hidden border-rule border-b bg-ink py-3 text-acid">
-			<div className="site-container flex whitespace-nowrap border-paper/10 lg:border-x">
-				<div className="animate-ticker">
+			<div className="site-container flex min-w-0 overflow-hidden whitespace-nowrap border-paper/10 lg:border-x">
+				<div className="w-max shrink-0 animate-ticker">
 					{tickerItems.map((item) => (
 						<span
 							key={item.id}

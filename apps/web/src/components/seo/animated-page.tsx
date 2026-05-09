@@ -16,18 +16,23 @@ export function AnimatedPage({ children }: { children: ReactNode }) {
 				return;
 			}
 
-			gsap.utils.toArray<HTMLElement>(".seo-reveal").forEach((element) => {
-				gsap.from(element, {
-					autoAlpha: 0,
-					y: 18,
-					duration: 0.65,
-					ease: "power2.out",
-					scrollTrigger: {
-						trigger: element,
-						start: "top 86%",
-						once: true,
-					},
-				});
+			ScrollTrigger.batch(".seo-reveal", {
+				start: "top 86%",
+				once: true,
+				onEnter: (elements) => {
+					gsap.fromTo(
+						elements,
+						{ autoAlpha: 0, y: 18 },
+						{
+							autoAlpha: 1,
+							y: 0,
+							duration: 0.65,
+							ease: "power2.out",
+							overwrite: "auto",
+							stagger: 0.08,
+						},
+					);
+				},
 			});
 		},
 		{ scope },
