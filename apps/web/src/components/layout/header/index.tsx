@@ -13,17 +13,10 @@ export default function Header() {
 		: "var(--nav-height)";
 
 	return (
-		<header
-			className="sticky top-0 z-[100] bg-paper"
-			style={
-				{
-					"--active-header-height": activeHeaderHeight,
-				} as CSSProperties
-			}
-		>
+		<>
 			{announcementOpen ? (
 				<div
-					className="border-rule border-b bg-acid text-ink transition-colors hover:bg-acid-hover"
+					className="fixed inset-x-0 top-0 z-[101] border-rule border-b bg-acid text-ink transition-colors hover:bg-acid-hover"
 					role="region"
 					aria-label="Announcement"
 				>
@@ -59,7 +52,15 @@ export default function Header() {
 					</div>
 				</div>
 			) : null}
-			<div className="border-rule border-b bg-paper">
+			<header
+				className="fixed inset-x-0 top-0 z-[100] border-rule border-b bg-paper"
+				style={
+					{
+						top: announcementOpen ? "var(--announcement-height)" : "0px",
+						"--active-header-height": activeHeaderHeight,
+					} as CSSProperties
+				}
+			>
 				<div className="site-container flex h-[var(--nav-height)] items-center justify-between border-rule px-6 lg:border-x lg:px-12">
 					<Logo />
 					<NavLinks />
@@ -73,7 +74,15 @@ export default function Header() {
 						<MobileNav />
 					</div>
 				</div>
-			</div>
-		</header>
+			</header>
+			<div
+				aria-hidden="true"
+				className={
+					announcementOpen
+						? "h-[var(--header-height)]"
+						: "h-[var(--nav-height)]"
+				}
+			/>
+		</>
 	);
 }
