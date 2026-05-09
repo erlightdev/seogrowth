@@ -525,6 +525,87 @@ export const testimonials = [
 	},
 ];
 
+export const caseStudies = [
+	{
+		name: "NorthPeak SaaS",
+		market: "USA",
+		category: "B2B software",
+		path: "/services/content-seo",
+		period: "8 months",
+		heroMetric: "+418%",
+		problem:
+			"Strong product, weak crawl control, scattered content and no clean path from informational traffic to pipeline.",
+		summary:
+			"Rebuilt technical foundations, mapped product-led keyword clusters and cleaned internal links across a complex SaaS content library.",
+		metrics: [
+			["+418%", "organic traffic"],
+			["$2.14M", "pipeline attributed"],
+			["37", "priority fixes shipped"],
+		],
+		work: ["Technical SEO", "Content SEO", "AI answer readiness"],
+		actions: [
+			"Reduced duplicate indexable URLs and fixed internal link dead zones",
+			"Mapped product use cases into bottom-funnel content clusters",
+			"Created comparison and integration pages for high-intent searches",
+			"Added answer-ready FAQ structures for AI search extraction",
+		],
+		trust:
+			"Pipeline attribution came from CRM source reports and organic landing-page paths, not ranking screenshots.",
+	},
+	{
+		name: "Archouse Commerce",
+		market: "Australia",
+		category: "Shopify ecommerce",
+		path: "/services/shopify-seo",
+		period: "6 months",
+		heroMetric: "+274%",
+		problem:
+			"Collections competed with duplicate product URLs, app scripts slowed templates and category pages lacked commercial depth.",
+		summary:
+			"Fixed duplicate collections, app bloat, product schema gaps and thin commercial pages before scaling category demand.",
+		metrics: [
+			["+274%", "organic revenue"],
+			["3,218", "page-one keywords"],
+			["19.6%", "faster collection templates"],
+		],
+		work: ["Shopify SEO", "E-commerce SEO", "Schema cleanup"],
+		actions: [
+			"Consolidated duplicate collection paths and canonical signals",
+			"Improved product, offer and review schema consistency",
+			"Removed app bloat from collection templates with the dev team",
+			"Built category copy around buying questions and comparison intent",
+		],
+		trust:
+			"Revenue lift was measured from organic landing pages and ecommerce conversion reports after excluding paid campaigns.",
+	},
+	{
+		name: "Vantage Legal",
+		market: "Canada",
+		category: "Professional services",
+		path: "/services/local-seo",
+		period: "5 months",
+		heroMetric: "+190%",
+		problem:
+			"Too many thin local pages, weak internal linking and reporting that counted rankings without lead quality.",
+		summary:
+			"Reorganized local service pages, removed weak city pages and built a reporting model around lead quality instead of vanity rankings.",
+		metrics: [
+			["+190%", "lead volume"],
+			["-42%", "cost per lead"],
+			["64", "local pages consolidated"],
+		],
+		work: ["Local SEO", "Technical SEO", "Content consolidation"],
+		actions: [
+			"Consolidated thin city pages into stronger service-location hubs",
+			"Rebuilt internal links around practice areas and regional demand",
+			"Aligned Google Business Profile categories and service signals",
+			"Tracked form submissions and qualified calls by organic source",
+		],
+		trust:
+			"Lead volume was counted from qualified form and call events, not raw sessions or unfiltered contact attempts.",
+	},
+];
+
 export const globalFaqs = [
 	{
 		question: "Which countries does SEOGrowth serve?",

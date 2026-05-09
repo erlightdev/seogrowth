@@ -11,7 +11,7 @@ export default function Footer() {
 		["SEO Outsourcing", "/seo-outsourcing"],
 		["Fiverr SEO Problems", "/fiverr-seo-problems"],
 		["Free SEO Audit", "/free-seo-audit"],
-		["Case Studies", "/#results"],
+		["Case Studies", "/case-studies"],
 		["Pricing", "/#pricing"],
 	];
 

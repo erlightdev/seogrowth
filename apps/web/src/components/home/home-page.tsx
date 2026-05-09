@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 
 import {
+	caseStudies,
 	countryPages,
 	fiverrProblems,
 	fullServiceList,
@@ -75,6 +76,7 @@ export function HomePage() {
 			<MarketSection />
 			<ProblemSection />
 			<ProcessSection />
+			<CaseStudiesSection />
 			<ProofSection />
 			<PricingSection />
 			<FinalCta />
@@ -392,6 +394,102 @@ function ProcessSection() {
 							</p>
 						</div>
 					))}
+				</div>
+			</div>
+		</section>
+	);
+}
+
+function CaseStudiesSection() {
+	return (
+		<section id="case-studies" className="border-rule border-b bg-[#eceae1]">
+			<div className="mx-auto max-w-7xl border-rule lg:border-x">
+				<SectionHeader
+					kicker="Case studies"
+					title="Proof across SaaS, Shopify and local services."
+					description="These are structured as organic growth stories: the problem, the work, the commercial metric and the service path a visitor can follow next."
+				/>
+				<div className="grid gap-px bg-rule lg:grid-cols-[1.1fr_0.9fr]">
+					<div className="grid gap-px bg-rule">
+						{caseStudies.map((study, index) => (
+							<Link
+								key={study.name}
+								to={study.path}
+								className="group grid gap-8 bg-paper p-7 text-ink no-underline transition duration-300 hover:bg-[#f3f3e6] md:grid-cols-[0.72fr_1.28fr] md:p-9"
+							>
+								<div>
+									<div className="mb-5 flex items-center justify-between">
+										<span className="font-mono text-[10px] text-muted-text uppercase tracking-[0.12em]">
+											{String(index + 1).padStart(2, "0")} / {study.market}
+										</span>
+										<span className="font-mono text-[12px] text-muted-text transition-transform group-hover:translate-x-1">
+											→
+										</span>
+									</div>
+									<h3 className="max-w-[9ch] font-serif text-[42px] leading-[0.92] tracking-[-0.035em]">
+										{study.name}
+									</h3>
+									<div className="mt-4 font-mono text-[10px] text-muted-text uppercase tracking-[0.12em]">
+										{study.category}
+									</div>
+								</div>
+								<div>
+									<p className="max-w-[62ch] text-[15px] text-muted-text leading-[1.7]">
+										{study.summary}
+									</p>
+									<div className="mt-8 grid gap-px bg-rule sm:grid-cols-3">
+										{study.metrics.map(([value, label]) => (
+											<div key={label} className="bg-paper py-4 pr-4">
+												<div className="font-serif text-[34px] leading-none tracking-[-0.035em]">
+													{value}
+												</div>
+												<div className="mt-2 font-mono text-[10px] text-muted-text uppercase tracking-[0.08em]">
+													{label}
+												</div>
+											</div>
+										))}
+									</div>
+									<div className="mt-7 flex flex-wrap gap-2">
+										{study.work.map((item) => (
+											<span
+												key={item}
+												className="border border-rule px-3 py-1.5 font-mono text-[10px] text-muted-text uppercase tracking-[0.08em]"
+											>
+												{item}
+											</span>
+										))}
+									</div>
+								</div>
+							</Link>
+						))}
+					</div>
+					<div className="relative overflow-hidden bg-ink p-7 text-paper md:p-10 lg:p-12">
+						<div className="absolute inset-0 opacity-[0.08] [background-image:radial-gradient(circle_at_center,rgba(200,245,58,.6)_1px,transparent_1px)] [background-size:28px_28px]" />
+						<div className="relative sticky top-24">
+							<div className="font-mono text-[10px] text-paper/35 uppercase tracking-[0.12em]">
+								Ranking motion
+							</div>
+							<h3 className="mt-5 max-w-[10ch] font-serif text-[54px] leading-[0.9] tracking-[-0.04em]">
+								Small fixes. Compounding curves.
+							</h3>
+							<div className="mt-12 grid h-[260px] grid-cols-9 items-end gap-2">
+								{[24, 31, 28, 44, 53, 61, 74, 82, 94].map((height) => (
+									<div
+										key={`case-rank-${height}`}
+										className="relative bg-paper/10"
+										style={{ height: `${height}%` }}
+									>
+										<div className="absolute inset-x-0 bottom-0 h-[44%] animate-pulse bg-acid/65" />
+									</div>
+								))}
+							</div>
+							<p className="mt-8 text-[14px] text-paper/50 leading-[1.7]">
+								The case studies are deliberately linked to service pages so
+								proof, problem and conversion stay connected for visitors and
+								crawlers.
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>

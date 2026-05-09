@@ -13,6 +13,7 @@ import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SeoOutsourcingRouteImport } from './routes/seo-outsourcing'
 import { Route as FreeSeoAuditRouteImport } from './routes/free-seo-audit'
 import { Route as FiverrSeoProblemsRouteImport } from './routes/fiverr-seo-problems'
+import { Route as CaseStudiesRouteImport } from './routes/case-studies'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ServicesWordpressSeoRouteImport } from './routes/services.wordpress-seo'
 import { Route as ServicesTechnicalSeoRouteImport } from './routes/services.technical-seo'
@@ -45,6 +46,11 @@ const FreeSeoAuditRoute = FreeSeoAuditRouteImport.update({
 const FiverrSeoProblemsRoute = FiverrSeoProblemsRouteImport.update({
   id: '/fiverr-seo-problems',
   path: '/fiverr-seo-problems',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CaseStudiesRoute = CaseStudiesRouteImport.update({
+  id: '/case-studies',
+  path: '/case-studies',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -115,6 +121,7 @@ const CountriesAustraliaSeoRoute = CountriesAustraliaSeoRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/case-studies': typeof CaseStudiesRoute
   '/fiverr-seo-problems': typeof FiverrSeoProblemsRoute
   '/free-seo-audit': typeof FreeSeoAuditRoute
   '/seo-outsourcing': typeof SeoOutsourcingRoute
@@ -134,6 +141,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/case-studies': typeof CaseStudiesRoute
   '/fiverr-seo-problems': typeof FiverrSeoProblemsRoute
   '/free-seo-audit': typeof FreeSeoAuditRoute
   '/seo-outsourcing': typeof SeoOutsourcingRoute
@@ -154,6 +162,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/case-studies': typeof CaseStudiesRoute
   '/fiverr-seo-problems': typeof FiverrSeoProblemsRoute
   '/free-seo-audit': typeof FreeSeoAuditRoute
   '/seo-outsourcing': typeof SeoOutsourcingRoute
@@ -175,6 +184,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/case-studies'
     | '/fiverr-seo-problems'
     | '/free-seo-audit'
     | '/seo-outsourcing'
@@ -194,6 +204,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/case-studies'
     | '/fiverr-seo-problems'
     | '/free-seo-audit'
     | '/seo-outsourcing'
@@ -213,6 +224,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/case-studies'
     | '/fiverr-seo-problems'
     | '/free-seo-audit'
     | '/seo-outsourcing'
@@ -233,6 +245,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CaseStudiesRoute: typeof CaseStudiesRoute
   FiverrSeoProblemsRoute: typeof FiverrSeoProblemsRoute
   FreeSeoAuditRoute: typeof FreeSeoAuditRoute
   SeoOutsourcingRoute: typeof SeoOutsourcingRoute
@@ -271,6 +284,13 @@ declare module '@tanstack/react-router' {
       path: '/fiverr-seo-problems'
       fullPath: '/fiverr-seo-problems'
       preLoaderRoute: typeof FiverrSeoProblemsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/case-studies': {
+      id: '/case-studies'
+      path: '/case-studies'
+      fullPath: '/case-studies'
+      preLoaderRoute: typeof CaseStudiesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -395,6 +415,7 @@ const ServicesRouteWithChildren = ServicesRoute._addFileChildren(
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CaseStudiesRoute: CaseStudiesRoute,
   FiverrSeoProblemsRoute: FiverrSeoProblemsRoute,
   FreeSeoAuditRoute: FreeSeoAuditRoute,
   SeoOutsourcingRoute: SeoOutsourcingRoute,

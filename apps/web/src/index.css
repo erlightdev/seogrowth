@@ -2,52 +2,96 @@
 
 /* ── Design tokens ── */
 :root {
-  --ink:   #0a0a08;
-  --paper: #f5f3ee;
-  --acid:  #c8f53a;
-  --acid-dark:  #8ab520;
-  --acid-hover: #b8e82a;
-  --muted-text: #5a5a52;
-  --rule:  rgba(10, 10, 8, 0.12);
+	--ink: #0a0a08;
+	--paper: #f5f3ee;
+	--acid: #c8f53a;
+	--acid-dark: #8ab520;
+	--acid-hover: #b8e82a;
+	--muted-text: #5a5a52;
+	--rule: rgba(10, 10, 8, 0.12);
 }
 
 @theme inline {
-  --color-ink:        var(--ink);
-  --color-paper:      var(--paper);
-  --color-acid:       var(--acid);
-  --color-acid-dark:  var(--acid-dark);
-  --color-acid-hover: var(--acid-hover);
-  --color-muted-text: var(--muted-text);
-  --color-rule:       var(--rule);
+	--color-ink: var(--ink);
+	--color-paper: var(--paper);
+	--color-acid: var(--acid);
+	--color-acid-dark: var(--acid-dark);
+	--color-acid-hover: var(--acid-hover);
+	--color-muted-text: var(--muted-text);
+	--color-rule: var(--rule);
 
-  --font-sans:  'Syne', sans-serif;
-  --font-serif: 'Instrument Serif', serif;
-  --font-mono:  'JetBrains Mono', monospace;
+	--font-sans: "Syne", sans-serif;
+	--font-serif: "Instrument Serif", serif;
+	--font-mono: "JetBrains Mono", monospace;
 
-  /* Ticker animation */
-  --animate-ticker: ticker 30s linear infinite;
-  @keyframes ticker {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
-  }
+	/* Ticker animation */
+	--animate-ticker: ticker 30s linear infinite;
+	@keyframes ticker {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(-50%);
+		}
+	}
 
-  /* Fade-up animation */
-  --animate-fade-up: fadeUp 0.7s ease forwards;
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
+	/* Fade-up animation */
+	--animate-fade-up: fadeUp 0.7s ease forwards;
+	@keyframes fadeUp {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
 }
 
 /* ── Base overrides ── */
 html {
-  overflow-x: hidden;
+	overflow-x: hidden;
 }
 
-html, body {
-  background-color: var(--paper);
-  color: var(--ink);
-  font-family: 'Syne', sans-serif;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+html,
+body {
+	background-color: var(--paper);
+	color: var(--ink);
+	font-family: "Syne", sans-serif;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+.case-study-swiper {
+	padding-bottom: 34px;
+}
+
+.case-study-swiper .swiper-pagination {
+	bottom: 10px;
+}
+
+.case-study-swiper .swiper-pagination-bullet {
+	width: 24px;
+	height: 2px;
+	border-radius: 0;
+	background: rgba(10, 10, 8, 0.32);
+	opacity: 1;
+}
+
+.case-study-swiper .swiper-pagination-bullet-active {
+	background: var(--acid-dark);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html,
+	body {
+		scroll-behavior: auto;
+	}
+
+	.animate-pulse,
+	.animate-ticker,
+	.animate-fade-up {
+		animation: none;
+	}
 }
