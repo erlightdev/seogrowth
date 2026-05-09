@@ -40,7 +40,7 @@ export function MobileNav() {
 			</button>
 
 			{open ? (
-				<div className="fixed inset-x-0 top-[var(--nav-height)] z-[99] max-h-[calc(100dvh-var(--nav-height))] overflow-y-auto border-rule border-b bg-paper shadow-[0_24px_70px_-48px_rgba(10,10,8,0.55)]">
+				<div className="fixed inset-x-0 top-[var(--active-header-height)] z-[99] max-h-[calc(100dvh-var(--active-header-height))] overflow-y-auto border-rule border-b bg-paper shadow-[0_24px_70px_-48px_rgba(10,10,8,0.55)]">
 					<div className="site-container border-rule lg:border-x">
 						<div className="grid gap-px bg-rule">
 							<section className="bg-paper p-5">

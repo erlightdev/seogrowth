@@ -1,25 +1,65 @@
+import { X } from "lucide-react";
+import type { CSSProperties } from "react";
+import { useState } from "react";
+
 import { Logo } from "./logo";
 import { MobileNav } from "./mobile-nav";
 import { NavLinks } from "./nav-links";
 
 export default function Header() {
+	const [announcementOpen, setAnnouncementOpen] = useState(true);
+	const activeHeaderHeight = announcementOpen
+		? "var(--header-height)"
+		: "var(--nav-height)";
+
 	return (
-		<>
-			<a
-				href="/free-seo-audit"
-				className="block border-rule border-b bg-acid text-ink no-underline transition-colors hover:bg-acid-hover"
-			>
-				<div className="site-container flex h-[var(--announcement-height)] items-center justify-between gap-4 border-ink/10 px-6 lg:border-x lg:px-12">
-					<span className="truncate font-mono text-[10px] text-ink/70 uppercase tracking-[0.12em]">
-						Free SEO audit slots open for Shopify, WordPress and bad backlink
-						recovery
-					</span>
-					<span className="shrink-0 font-bold font-sans text-[11px] text-ink uppercase tracking-[0.08em]">
-						Book audit →
-					</span>
+		<header
+			className="sticky top-0 z-[100] bg-paper"
+			style={
+				{
+					"--active-header-height": activeHeaderHeight,
+				} as CSSProperties
+			}
+		>
+			{announcementOpen ? (
+				<div
+					className="border-rule border-b bg-acid text-ink transition-colors hover:bg-acid-hover"
+					role="region"
+					aria-label="Announcement"
+				>
+					<div className="site-container grid h-[var(--announcement-height)] grid-cols-[1fr_auto] items-center gap-3 border-ink/10 px-4 sm:px-6 lg:border-x lg:px-12">
+						<a
+							href="/free-seo-audit"
+							className="min-w-0 text-ink no-underline"
+						>
+							<span className="block truncate font-mono text-[10px] text-ink/70 uppercase tracking-[0.12em] sm:hidden">
+								Free SEO audit slots open
+							</span>
+							<span className="hidden truncate font-mono text-[10px] text-ink/70 uppercase tracking-[0.12em] sm:block">
+								Free SEO audit slots open for Shopify, WordPress and bad
+								backlink recovery
+							</span>
+						</a>
+						<div className="flex items-center gap-2 sm:gap-4">
+							<a
+								href="/free-seo-audit"
+								className="hidden shrink-0 font-bold font-sans text-[11px] text-ink uppercase tracking-[0.08em] no-underline sm:inline-flex"
+							>
+								Book audit →
+							</a>
+							<button
+								type="button"
+								aria-label="Close announcement"
+								onClick={() => setAnnouncementOpen(false)}
+								className="inline-flex h-7 w-7 items-center justify-center border border-ink/15 bg-transparent text-ink transition-colors hover:border-ink/40 hover:bg-ink/5 active:translate-y-px"
+							>
+								<X size={14} strokeWidth={1.9} />
+							</button>
+						</div>
+					</div>
 				</div>
-			</a>
-			<header className="sticky top-0 z-[100] border-rule border-b bg-paper">
+			) : null}
+			<div className="border-rule border-b bg-paper">
 				<div className="site-container flex h-[var(--nav-height)] items-center justify-between border-rule px-6 lg:border-x lg:px-12">
 					<Logo />
 					<NavLinks />
@@ -33,7 +73,7 @@ export default function Header() {
 						<MobileNav />
 					</div>
 				</div>
-			</header>
-		</>
+			</div>
+		</header>
 	);
 }

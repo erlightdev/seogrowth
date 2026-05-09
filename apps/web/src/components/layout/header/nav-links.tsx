@@ -41,7 +41,7 @@ export function NavLinks() {
 				>
 					Services
 				</a>
-				<div className="pointer-events-none fixed inset-x-0 top-[var(--nav-height)] border-rule border-b bg-paper opacity-0 shadow-[0_24px_70px_-48px_rgba(10,10,8,0.45)] transition duration-300 group-focus-within:pointer-events-auto group-focus-within:opacity-100 group-hover:pointer-events-auto group-hover:opacity-100">
+				<div className="pointer-events-none fixed inset-x-0 top-[var(--active-header-height)] border-rule border-b bg-paper opacity-0 shadow-[0_24px_70px_-48px_rgba(10,10,8,0.45)] transition duration-300 group-focus-within:pointer-events-auto group-focus-within:opacity-100 group-hover:pointer-events-auto group-hover:opacity-100">
 					<div className="site-container grid grid-cols-[1.2fr_0.95fr_0.85fr] gap-px border-rule bg-rule lg:border-x">
 						<div className="bg-paper p-8">
 							<div className="mb-6 font-mono text-[10px] text-muted-text uppercase tracking-[0.12em]">
