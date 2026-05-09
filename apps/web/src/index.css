@@ -9,6 +9,9 @@
 	--acid-hover: #b8e82a;
 	--muted-text: #5a5a52;
 	--rule: rgba(10, 10, 8, 0.12);
+	--announcement-height: 36px;
+	--nav-height: 60px;
+	--header-height: calc(var(--announcement-height) + var(--nav-height));
 }
 
 @theme inline {

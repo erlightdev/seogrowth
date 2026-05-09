@@ -12,7 +12,7 @@ export function PageHero({
 	primaryCta?: string;
 }) {
 	return (
-		<section className="border-rule border-b pt-[60px]">
+		<section className="border-rule border-b">
 			<div className="site-container grid min-h-[68vh] grid-cols-1 border-rule lg:grid-cols-[1.35fr_0.65fr] lg:border-x">
 				<div className="seo-reveal flex flex-col justify-end border-rule border-b px-6 py-16 lg:border-r lg:border-b-0 lg:px-12 lg:py-20">
 					<div className="mb-8 flex items-center gap-2.5 font-mono text-[11px] text-muted-text uppercase tracking-[0.12em]">

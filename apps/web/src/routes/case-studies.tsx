@@ -53,7 +53,7 @@ function CaseStudiesPage() {
 					{ name: "Case Studies", path: "/case-studies" },
 				])}
 			/>
-			<main className="min-w-0 overflow-x-hidden bg-paper pt-[60px] text-ink">
+			<main className="min-w-0 overflow-x-hidden bg-paper text-ink">
 				<Hero />
 				<CaseSwiper />
 				<TrustSection />

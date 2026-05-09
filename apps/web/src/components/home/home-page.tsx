@@ -86,9 +86,9 @@ export function HomePage() {
 
 function Hero() {
 	return (
-		<section className="relative isolate overflow-hidden border-rule border-b pt-[60px]">
+		<section className="relative isolate overflow-hidden border-rule border-b">
 			<div className="pointer-events-none absolute inset-0 z-0 opacity-[0.06] [background-image:linear-gradient(rgba(10,10,8,.35)_1px,transparent_1px),linear-gradient(90deg,rgba(10,10,8,.35)_1px,transparent_1px)] [background-size:48px_48px]" />
-			<div className="site-container relative z-[1] grid min-h-[calc(100dvh-60px)] grid-cols-1 border-rule lg:grid-cols-[1.08fr_0.92fr] lg:border-x">
+			<div className="site-container relative z-[1] grid min-h-[calc(100dvh-var(--header-height))] grid-cols-1 border-rule lg:grid-cols-[1.08fr_0.92fr] lg:border-x">
 				<div className="relative z-[2] flex flex-col justify-between px-5 pt-14 pb-10 md:px-8 lg:px-12 lg:pt-20 lg:pb-12">
 					<div className="max-w-[760px]">
 						<div className="mb-8 flex flex-wrap items-center gap-3">
