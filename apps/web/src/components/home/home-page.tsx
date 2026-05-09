@@ -429,20 +429,18 @@ function MarketSection() {
 					description="Each country page is a real entry point with localized keyword positioning, not copied location text."
 				/>
 				<div className="grid gap-px bg-rule md:grid-cols-2 lg:grid-cols-[1.15fr_0.85fr_1fr_0.9fr]">
-					{markets.map((market, index) => (
+					{markets.map((market) => (
 						<Link
 							key={market.path}
 							to={market.path}
-							className={`group min-h-[260px] bg-paper p-7 text-ink no-underline transition duration-300 hover:bg-[#f3f3e6] md:p-9 ${
-								index === 0 ? "lg:row-span-2 lg:min-h-[520px]" : ""
-							}`}
+							className="group min-h-[260px] bg-paper p-7 text-ink no-underline transition duration-300 hover:bg-[#f3f3e6] md:p-9 lg:min-h-[460px]"
 						>
 							<div className="flex h-full flex-col justify-between">
 								<div>
 									<div className="font-mono text-[10px] text-muted-text uppercase tracking-[0.12em]">
 										{market.kicker}
 									</div>
-									<h3 className="mt-5 max-w-[9ch] font-serif text-[42px] leading-[0.95] tracking-[-0.03em]">
+									<h3 className="mt-5 max-w-2xl font-serif text-[42px] leading-[0.95] tracking-[-0.03em]">
 										{market.title}
 									</h3>
 								</div>
