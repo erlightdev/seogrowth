@@ -1,0 +1,3 @@
+{
+  "extends": "@seogrowth/config/tsconfig.base.json"
+}
