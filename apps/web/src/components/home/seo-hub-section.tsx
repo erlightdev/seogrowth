@@ -13,7 +13,7 @@ const serviceEntries = Object.values(services);
 export function SeoHubSection() {
 	return (
 		<section className="border-rule border-b bg-paper">
-			<div className="mx-auto max-w-7xl border-rule lg:border-x">
+			<div className="site-container border-rule lg:border-x">
 				<div className="seo-reveal grid grid-cols-1 items-end gap-8 border-rule border-b px-6 py-16 pb-10 lg:grid-cols-2 lg:px-12">
 					<div>
 						<div className="mb-4 flex items-center gap-2 font-mono text-[11px] text-muted-text uppercase tracking-[0.12em]">

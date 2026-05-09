@@ -51,7 +51,7 @@ const PLANS = [
 export function PricingSection() {
 	return (
 		<section id="pricing" className="border-rule border-b bg-paper">
-			<div className="mx-auto max-w-7xl border-rule lg:border-x">
+			<div className="site-container border-rule lg:border-x">
 				{/* Header */}
 				<div className="grid grid-cols-1 items-end gap-8 border-rule border-b px-6 py-16 pb-10 lg:grid-cols-2 lg:px-12">
 					<div>

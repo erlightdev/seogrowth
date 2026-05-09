@@ -10,8 +10,8 @@ export function AuditCta({
 	cta?: string;
 }) {
 	return (
-		<section className="seo-reveal border-rule border-y bg-ink px-6 py-16 text-paper lg:px-12">
-			<div className="grid grid-cols-1 items-end gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+		<section className="seo-reveal border-rule border-y bg-ink text-paper">
+			<div className="site-container grid grid-cols-1 items-end gap-8 border-paper/10 px-6 py-16 lg:grid-cols-[1.2fr_0.8fr] lg:border-x lg:px-12">
 				<div>
 					<div className="mb-4 font-mono text-[11px] text-paper/40 uppercase tracking-[0.12em]">
 						Free SEO audit

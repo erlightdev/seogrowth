@@ -88,7 +88,7 @@ function Hero() {
 	return (
 		<section className="relative overflow-hidden border-rule border-b pt-[60px]">
 			<div className="pointer-events-none absolute inset-0 opacity-[0.06] [background-image:linear-gradient(rgba(10,10,8,.35)_1px,transparent_1px),linear-gradient(90deg,rgba(10,10,8,.35)_1px,transparent_1px)] [background-size:48px_48px]" />
-			<div className="relative mx-auto grid min-h-[calc(100dvh-60px)] max-w-7xl grid-cols-1 border-rule lg:grid-cols-[1.08fr_0.92fr] lg:border-x">
+			<div className="site-container relative grid min-h-[calc(100dvh-60px)] grid-cols-1 border-rule lg:grid-cols-[1.08fr_0.92fr] lg:border-x">
 				<div className="flex flex-col justify-between px-5 pt-14 pb-10 md:px-8 lg:px-12 lg:pt-20 lg:pb-12">
 					<div className="max-w-[760px]">
 						<div className="mb-8 flex flex-wrap items-center gap-3">
@@ -197,7 +197,7 @@ function Hero() {
 function SignalBar() {
 	return (
 		<div className="overflow-hidden border-rule border-b bg-ink py-3 text-acid">
-			<div className="mx-auto flex max-w-7xl whitespace-nowrap border-paper/10 lg:border-x">
+			<div className="site-container flex whitespace-nowrap border-paper/10 lg:border-x">
 				<div className="animate-ticker">
 					{tickerItems.map((item) => (
 						<span
@@ -217,7 +217,7 @@ function SignalBar() {
 function ServiceMatrix() {
 	return (
 		<section id="services" className="border-rule border-b">
-			<div className="mx-auto max-w-7xl border-rule lg:border-x">
+			<div className="site-container border-rule lg:border-x">
 				<SectionHeader
 					kicker="Complete SEO service list"
 					title="A practical stack, not a menu of random tactics."
@@ -291,7 +291,7 @@ function ServiceMatrix() {
 function MarketSection() {
 	return (
 		<section className="border-rule border-b">
-			<div className="mx-auto max-w-7xl border-rule lg:border-x">
+			<div className="site-container border-rule lg:border-x">
 				<SectionHeader
 					kicker="Country SEO pages"
 					title="Built for markets where buyers actually search."
@@ -330,7 +330,7 @@ function MarketSection() {
 function ProblemSection() {
 	return (
 		<section className="border-rule border-b bg-[#eceae1]">
-			<div className="mx-auto grid max-w-7xl gap-px bg-rule lg:grid-cols-[0.9fr_1.1fr] lg:border-rule lg:border-x">
+			<div className="site-container grid gap-px bg-rule lg:grid-cols-[0.9fr_1.1fr] lg:border-rule lg:border-x">
 				<div className="bg-[#eceae1] p-7 md:p-10 lg:p-12">
 					<div className="font-mono text-[10px] text-muted-text uppercase tracking-[0.12em]">
 						Fiverr SEO recovery
@@ -368,7 +368,7 @@ function ProblemSection() {
 function ProcessSection() {
 	return (
 		<section id="process" className="border-rule border-b">
-			<div className="mx-auto max-w-7xl border-rule lg:border-x">
+			<div className="site-container border-rule lg:border-x">
 				<SectionHeader
 					kicker="How the work moves"
 					title="Four steps, one accountable growth system."
@@ -403,7 +403,7 @@ function ProcessSection() {
 function CaseStudiesSection() {
 	return (
 		<section id="case-studies" className="border-rule border-b bg-[#eceae1]">
-			<div className="mx-auto max-w-7xl border-rule lg:border-x">
+			<div className="site-container border-rule lg:border-x">
 				<SectionHeader
 					kicker="Case studies"
 					title="Proof across SaaS, Shopify and local services."
@@ -499,7 +499,7 @@ function CaseStudiesSection() {
 function ProofSection() {
 	return (
 		<section id="results" className="border-rule border-b">
-			<div className="mx-auto grid max-w-7xl gap-px bg-rule lg:grid-cols-[1fr_1fr] lg:border-rule lg:border-x">
+			<div className="site-container grid gap-px bg-rule lg:grid-cols-[1fr_1fr] lg:border-rule lg:border-x">
 				<div className="bg-ink p-7 text-paper md:p-10 lg:p-12">
 					<div className="font-mono text-[10px] text-paper/35 uppercase tracking-[0.12em]">
 						Case study signal
@@ -560,7 +560,7 @@ function ProofSection() {
 function PricingSection() {
 	return (
 		<section id="pricing" className="border-rule border-b">
-			<div className="mx-auto max-w-7xl border-rule lg:border-x">
+			<div className="site-container border-rule lg:border-x">
 				<SectionHeader
 					kicker="Starting prices"
 					title="Transparent enough to qualify. Flexible enough to scope properly."
@@ -623,7 +623,7 @@ function PricingSection() {
 function FinalCta() {
 	return (
 		<section className="border-rule border-b bg-ink text-paper">
-			<div className="mx-auto grid max-w-7xl gap-px bg-paper/10 lg:grid-cols-[1.15fr_0.85fr] lg:border-paper/10 lg:border-x">
+			<div className="site-container grid gap-px bg-paper/10 lg:grid-cols-[1.15fr_0.85fr] lg:border-paper/10 lg:border-x">
 				<div className="bg-ink p-7 md:p-10 lg:p-12">
 					<div className="font-mono text-[10px] text-paper/35 uppercase tracking-[0.12em]">
 						Free SEO audit

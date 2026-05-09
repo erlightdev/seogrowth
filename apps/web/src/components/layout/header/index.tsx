@@ -5,7 +5,7 @@ import { NavLinks } from "./nav-links";
 export default function Header() {
 	return (
 		<header className="fixed inset-x-0 top-0 z-[100] border-rule border-b bg-paper">
-			<div className="mx-auto flex h-[60px] max-w-7xl items-center justify-between border-rule px-6 lg:border-x lg:px-12">
+			<div className="site-container flex h-[60px] items-center justify-between border-rule px-6 lg:border-x lg:px-12">
 				<Logo />
 				<NavLinks />
 				<div className="flex items-center gap-3">

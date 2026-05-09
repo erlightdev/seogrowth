@@ -63,6 +63,11 @@ body {
 	scroll-behavior: smooth;
 }
 
+.site-container {
+	width: min(100%, 80rem);
+	margin-inline: auto;
+}
+
 .case-study-swiper {
 	padding-bottom: 34px;
 }

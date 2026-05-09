@@ -70,7 +70,7 @@ function CaseStudiesPage() {
 function Hero() {
 	return (
 		<section className="border-rule border-b">
-			<div className="mx-auto grid min-h-[62dvh] max-w-7xl gap-px bg-rule lg:grid-cols-[1.08fr_0.92fr] lg:border-rule lg:border-x">
+			<div className="site-container grid min-h-[62dvh] gap-px bg-rule lg:grid-cols-[1.08fr_0.92fr] lg:border-rule lg:border-x">
 				<div className="seo-reveal bg-paper p-6 md:p-10 lg:p-12">
 					<div className="mb-8 flex items-center gap-2 font-mono text-[10px] text-muted-text uppercase tracking-[0.12em]">
 						<span className="h-px w-6 bg-muted-text" />
@@ -138,7 +138,7 @@ function Hero() {
 function CaseSwiper() {
 	return (
 		<section id="case-study-details" className="border-rule border-b">
-			<div className="mx-auto max-w-7xl border-rule lg:border-x">
+			<div className="site-container border-rule lg:border-x">
 				<div className="seo-reveal grid grid-cols-1 items-end gap-8 border-rule border-b px-6 py-14 md:px-10 lg:grid-cols-[0.9fr_1.1fr] lg:px-12">
 					<div>
 						<div className="mb-5 font-mono text-[10px] text-muted-text uppercase tracking-[0.12em]">
@@ -265,7 +265,7 @@ function CaseSwiper() {
 function TrustSection() {
 	return (
 		<section className="border-rule border-b bg-[#eceae1]">
-			<div className="mx-auto grid max-w-7xl gap-px bg-rule lg:grid-cols-[0.8fr_1.2fr] lg:border-rule lg:border-x">
+			<div className="site-container grid gap-px bg-rule lg:grid-cols-[0.8fr_1.2fr] lg:border-rule lg:border-x">
 				<div className="seo-reveal bg-[#eceae1] p-7 md:p-10 lg:p-12">
 					<div className="font-mono text-[10px] text-muted-text uppercase tracking-[0.12em]">
 						Trust layer
@@ -299,7 +299,7 @@ function TrustSection() {
 function CompactComparison() {
 	return (
 		<section className="border-rule border-b">
-			<div className="mx-auto max-w-7xl border-rule lg:border-x">
+			<div className="site-container border-rule lg:border-x">
 				<div className="grid gap-px bg-rule lg:grid-cols-3">
 					{[
 						[

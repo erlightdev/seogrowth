@@ -86,21 +86,23 @@ function SeoOutsourcingPage() {
 					]}
 				/>
 			</section>
-			<section className="seo-reveal border-rule border-b bg-paper px-6 py-16 lg:px-12">
-				<h2 className="max-w-[14ch] font-serif text-[clamp(38px,5vw,64px)] leading-[1] tracking-[-0.02em]">
-					Need white-label support?
-				</h2>
-				<p className="mt-6 max-w-[58ch] text-[15px] text-muted-text leading-[1.75]">
-					SEOGrowth is positioned as a direct-client agency first, but can
-					support agencies that need specialist SEO execution. Start with a free
-					audit so we can scope the work accurately.
-				</p>
-				<Link
-					to="/free-seo-audit"
-					className="mt-8 inline-flex bg-acid px-8 py-3.5 font-bold font-sans text-[13px] text-ink uppercase tracking-[0.06em] no-underline transition-colors hover:bg-acid-hover"
-				>
-					Request outsourcing audit
-				</Link>
+			<section className="border-rule border-b bg-paper">
+				<div className="seo-reveal site-container border-rule px-6 py-16 lg:border-x lg:px-12">
+					<h2 className="max-w-[14ch] font-serif text-[clamp(38px,5vw,64px)] leading-[1] tracking-[-0.02em]">
+						Need white-label support?
+					</h2>
+					<p className="mt-6 max-w-[58ch] text-[15px] text-muted-text leading-[1.75]">
+						SEOGrowth is positioned as a direct-client agency first, but can
+						support agencies that need specialist SEO execution. Start with a
+						free audit so we can scope the work accurately.
+					</p>
+					<Link
+						to="/free-seo-audit"
+						className="mt-8 inline-flex bg-acid px-8 py-3.5 font-bold font-sans text-[13px] text-ink uppercase tracking-[0.06em] no-underline transition-colors hover:bg-acid-hover"
+					>
+						Request outsourcing audit
+					</Link>
+				</div>
 			</section>
 			<AuditCta title="Scope your outsourced SEO execution." />
 		</AnimatedPage>

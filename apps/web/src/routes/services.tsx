@@ -48,7 +48,7 @@ function ServicesPage() {
 					title="Everything needed to rank and convert"
 					description="Use this as the complete SEO service list for buyers comparing agencies, freelancers and outsourcing partners."
 				/>
-				<div className="grid grid-cols-1 gap-px bg-rule md:grid-cols-2 lg:grid-cols-3">
+				<div className="site-container grid grid-cols-1 gap-px bg-rule md:grid-cols-2 lg:grid-cols-3 lg:border-rule lg:border-x">
 					{fullServiceList.map((item) => (
 						<div key={item} className="seo-reveal bg-paper p-6">
 							<span className="mr-3 font-mono text-[11px] text-acid">+</span>

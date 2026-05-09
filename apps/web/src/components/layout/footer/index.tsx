@@ -25,7 +25,7 @@ export default function Footer() {
 
 	return (
 		<footer className="bg-ink px-6 pt-20 pb-8 text-paper lg:px-12">
-			<div className="mx-auto max-w-7xl">
+			<div className="site-container">
 				<div className="mb-16 grid grid-cols-1 gap-8 border-white/10 border-b pb-12 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] lg:gap-16">
 					<div>
 						<div className="mb-4 flex items-center gap-2 font-extrabold font-sans text-[18px] uppercase tracking-[0.06em]">

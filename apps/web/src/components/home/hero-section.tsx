@@ -34,7 +34,7 @@ const METRICS = [
 export function HeroSection() {
 	return (
 		<section className="border-rule border-b bg-paper pt-[60px]">
-			<div className="mx-auto grid min-h-[calc(100vh-60px)] max-w-7xl grid-cols-1 border-rule lg:grid-cols-2 lg:border-x">
+			<div className="site-container grid min-h-[calc(100vh-60px)] grid-cols-1 border-rule lg:grid-cols-2 lg:border-x">
 				{/* Left — copy */}
 				<div className="flex flex-col justify-between border-rule border-b px-6 pt-20 pb-14 lg:border-r lg:border-b-0 lg:px-12 lg:pt-24 lg:pb-16">
 					<div>

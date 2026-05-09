@@ -5,7 +5,7 @@ export function FaqSection({
 }) {
 	return (
 		<section className="border-rule border-b bg-paper">
-			<div className="seo-reveal grid grid-cols-1 gap-px bg-rule lg:grid-cols-3">
+			<div className="seo-reveal site-container grid grid-cols-1 gap-px bg-rule lg:grid-cols-3 lg:border-rule lg:border-x">
 				<div className="bg-paper p-8 lg:p-12">
 					<div className="font-mono text-[11px] text-muted-text uppercase tracking-[0.12em]">
 						FAQ

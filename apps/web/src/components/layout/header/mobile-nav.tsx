@@ -41,7 +41,7 @@ export function MobileNav() {
 
 			{open ? (
 				<div className="fixed inset-x-0 top-[60px] z-[99] max-h-[calc(100dvh-60px)] overflow-y-auto border-rule border-b bg-paper shadow-[0_24px_70px_-48px_rgba(10,10,8,0.55)]">
-					<div className="mx-auto max-w-7xl border-rule lg:border-x">
+					<div className="site-container border-rule lg:border-x">
 						<div className="grid gap-px bg-rule">
 							<section className="bg-paper p-5">
 								<div className="mb-4 font-mono text-[10px] text-muted-text uppercase tracking-[0.12em]">

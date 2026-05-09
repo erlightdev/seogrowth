@@ -8,7 +8,7 @@ export function ServiceCardGrid({ slugs }: { slugs?: ServiceSlug[] }) {
 	);
 
 	return (
-		<div className="grid grid-cols-1 gap-px bg-rule md:grid-cols-2 lg:grid-cols-4">
+		<div className="site-container grid grid-cols-1 gap-px bg-rule md:grid-cols-2 lg:grid-cols-4 lg:border-rule lg:border-x">
 			{entries.map((service, index) => (
 				<Link
 					key={service.path}
