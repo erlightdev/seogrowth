@@ -512,8 +512,8 @@ function ProcessSection() {
 							className="min-h-[280px] bg-paper p-7 md:p-9 lg:p-10"
 						>
 							<div className="mb-16 flex items-center justify-between">
-								<span className="font-serif text-[72px] text-ink/[0.07] leading-none tracking-[-0.06em]">
-									0{index + 1}
+								<span className="flex h-8 w-8 items-center justify-center bg-acid font-mono text-[10px] text-ink">
+									{String(index + 1).padStart(2, "0")}
 								</span>
 								<span className="h-2 w-2 bg-acid" />
 							</div>
