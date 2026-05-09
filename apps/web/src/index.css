@@ -91,6 +91,31 @@ body {
 	background: var(--acid-dark);
 }
 
+.hero-gradient-text {
+	background-image: linear-gradient(
+		90deg,
+		var(--acid-dark),
+		var(--acid),
+		var(--ink),
+		var(--acid-dark)
+	);
+	background-size: 280% 100%;
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	animation: heroGradientText 5s ease-in-out infinite;
+}
+
+@keyframes heroGradientText {
+	0%,
+	100% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+}
+
 @media (prefers-reduced-motion: reduce) {
 	html,
 	body {
@@ -99,7 +124,8 @@ body {
 
 	.animate-pulse,
 	.animate-ticker,
-	.animate-fade-up {
+	.animate-fade-up,
+	.hero-gradient-text {
 		animation: none;
 	}
 }

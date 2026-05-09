@@ -141,7 +141,7 @@ function Hero() {
 					</p>
 					<h1 className="mx-auto max-w-5xl text-balance font-serif font-normal text-[50px] leading-[0.92] tracking-[-0.035em] text-ink sm:text-[70px] lg:text-[96px]">
 						See your next SEO result{" "}
-						<span className="text-muted-text italic">
+						<span className="hero-gradient-text italic">
 							before you reach it.
 						</span>
 					</h1>
@@ -797,7 +797,7 @@ function SectionHeader({
 					<span className="h-px w-5 bg-muted-text" />
 					{kicker}
 				</div>
-				<h2 className="max-w-[15ch] text-balance font-serif text-[clamp(40px,5vw,72px)] leading-[0.92] tracking-[-0.035em]">
+				<h2 className="max-w-3xl text-balance font-serif text-[clamp(40px,5vw,72px)] leading-[0.92] tracking-[-0.035em]">
 					{title}
 				</h2>
 			</div>
